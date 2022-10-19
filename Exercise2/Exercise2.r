@@ -1,10 +1,12 @@
-install.packages(jtools)
+#Init
+install.packages("psych")
+install.packages("dplyr")
+install.packages("jtools")
 library(psych)
 library(dplyr)
 library(jtools)
 read.csv("ESS_UK_ES2.csv")
 ESS2<- read.csv("ESS_UK_ES2.csv")
-install.packages("jtools")
 #Making a Linear Model of regression
 x2m1<-lm(data=ESS2, internet~age)
 summ(x2m1)
@@ -12,7 +14,6 @@ library(jtools)
 #Calculating standardised regression coefficients 
 summ(x2m1, scale=TRUE,transform.response=TRUE)
 plot(ESS2$age, ESS2$internet,abline(x2m1))
--3.96*40+405.06
 #Multi-variable Regression 
 x2m2<-lm(data=ESS2,internet~age+happy)
 summ(x2m2)
