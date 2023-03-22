@@ -3,7 +3,7 @@ install.packages("psych")
 install.packages("dplyr")
 install.packages("jtools")
 library(psych)
-library(dplyr)
+library
 library(jtools)
 read.csv("ESS_UK_ES2.csv")
 ESS2<- read.csv("ESS_UK_ES2.csv")
